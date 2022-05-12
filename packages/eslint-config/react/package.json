@@ -1,0 +1,23 @@
+{
+  "name": "@toolboxes/eslint-config-react",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "Hao Chen <hey@haochen.me>",
+  "main": "lib/index.js",
+  "scripts": {
+    "dev:start": "tsc -w",
+    "build:cjs": "rimraf ./lib && tsc --module commonjs --outdir lib",
+    "build:esm": "rimraf ./esm && tsc --module esnext --outdir esm",
+    "build": "concurrently --kill-others \"npm:build:*\"",
+    "lint": "eslint --ext .ts --max-warnings 0 ./"
+  },
+  "peerDependencies": {
+    "eslint": "^7.4.0 || ^8"
+  },
+  "dependencies": {
+    "@toolboxes/eslint-config-ts": "workspace:^0.1.0",
+    "eslint-plugin-react": "^7.29.4"
+  }
+}

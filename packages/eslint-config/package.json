@@ -1,0 +1,22 @@
+{
+  "name": "@toolboxes/eslint-config-monorepo",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Hao Chen <hey@haochen.me>",
+  "scripts": {
+    "test": "jest",
+    "release": "pnpm -r publish --access public"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0"
+  },
+  "jest": {
+    "preset": "ts-jest"
+  },
+  "dependencies": {
+    "@toolboxes/eslint-config-basic": "workspace:^0.1.0",
+    "@toolboxes/eslint-config-react": "workspace:^0.1.0",
+    "@toolboxes/eslint-config-ts": "workspace:^0.1.0",
+    "@toolboxes/eslint-config-vue": "workspace:^0.1.0"
+  }
+}

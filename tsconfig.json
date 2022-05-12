@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "esnext",
+    "declaration": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "types": ["jest", "node"],
+    "emitDecoratorMetadata": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "isolatedModules": false,
+    "experimentalDecorators": true,
+    "jsx": "preserve",
+    "downlevelIteration": true
+  },
+  "include": ["packages"],
+  "exclude": ["**/lib/**/*", "**/esm/**/*", "**/__test__/**/*"]
+}

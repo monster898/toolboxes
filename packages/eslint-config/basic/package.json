@@ -1,0 +1,44 @@
+{
+  "name": "@toolboxes/eslint-config-basic",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "Hao Chen <hey@haochen.me>",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "files": [
+    "esm",
+    "lib"
+  ],
+  "scripts": {
+    "dev:start": "tsc -w",
+    "build:cjs": "rimraf ./lib && tsc --module commonjs --outdir lib",
+    "build:esm": "rimraf ./esm && tsc --module esnext --outdir esm",
+    "build": "concurrently --kill-others \"npm:build:*\"",
+    "lint": "eslint --ext .ts --max-warnings 0 ./"
+  },
+  "peerDependencies": {
+    "eslint": "^7.4.0 || ^8"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsonc": "^2.2.1",
+    "eslint-plugin-markdown": "^2.2.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-unicorn": "^42.0.0",
+    "eslint-plugin-yml": "^0.14.0",
+    "jsonc-eslint-parser": "^2.1.0",
+    "yaml-eslint-parser": "^0.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "prettier": "^2.6.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

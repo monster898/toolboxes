@@ -1,0 +1,33 @@
+{
+  "name": "@toolboxes/eslint-config-ts",
+  "version": "0.1.0",
+  "description": "",
+  "license": "MIT",
+  "author": "Hao Chen <hey@haochen.me>",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "scripts": {
+    "dev:start": "tsc -w",
+    "build:cjs": "rimraf ./lib && tsc --module commonjs --outdir lib",
+    "build:esm": "rimraf ./esm && tsc --module esnext --outdir esm",
+    "build": "concurrently --kill-others \"npm:build:*\"",
+    "lint": "eslint --ext .ts --max-warnings 0 ./"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "eslint": "^7.4.0 || ^8",
+    "typescript": ">=3.9"
+  },
+  "dependencies": {
+    "@toolboxes/eslint-config-basic": "workspace:^0.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "eslint-plugin-jest": "^26.1.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "typescript": "^4.6.4"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@toolboxes/eslint-config-vue",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "Hao Chen <hey@haochen.me>",
+  "main": "lib/index.js",
+  "scripts": {
+    "dev:start": "tsc -w",
+    "build:cjs": "rimraf ./lib && tsc --module commonjs --outdir lib",
+    "build": "concurrently --kill-others \"npm:build:*\"",
+    "lint": "eslint --ext .ts --max-warnings 0 ./"
+  },
+  "dependencies": {
+    "@toolboxes/eslint-config-ts": "workspace:^0.1.0",
+    "eslint-plugin-vue": "^8.7.1"
+  }
+}
