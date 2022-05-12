@@ -1,11 +1,14 @@
 {
   "name": "@toolboxes/eslint-config-ts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "license": "MIT",
   "author": "Hao Chen <hey@haochen.me>",
   "main": "lib/index.js",
   "module": "esm/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "dev:start": "tsc -w",
     "build:cjs": "rimraf ./lib && tsc --module commonjs --outdir lib",

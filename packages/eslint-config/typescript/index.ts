@@ -14,7 +14,7 @@ const config: CommonConfigData = {
       node: { extensions: [".js", ".jsx", ".mjs", ".ts", ".tsx", ".d.ts"] },
     },
     jest: {
-      version: require("jest/package.json").version,
+      version: 28,
     },
   },
   overrides: basic.overrides,
