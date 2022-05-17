@@ -16,13 +16,6 @@ export const rules: Record<string, RuleSetting> = {
       ignoreReadBeforeAssign: true,
     },
   ],
-  "prefer-arrow-callback": [
-    "error",
-    {
-      allowNamedFunctions: false,
-      allowUnboundThis: true,
-    },
-  ],
   "object-shorthand": [
     "error",
     "always",

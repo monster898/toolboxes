@@ -50,12 +50,6 @@ const config: CommonConfigData = {
       "error",
       { functions: false, classes: false, variables: true },
     ],
-    "brace-style": "off",
-    "@typescript-eslint/brace-style": [
-      "error",
-      "stroustrup",
-      { allowSingleLine: true },
-    ],
     "comma-dangle": "off",
     "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
     "object-curly-spacing": "off",
