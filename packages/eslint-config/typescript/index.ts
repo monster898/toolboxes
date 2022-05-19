@@ -50,8 +50,6 @@ const config: CommonConfigData = {
       "error",
       { functions: false, classes: false, variables: true },
     ],
-    "comma-dangle": "off",
-    "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
     "object-curly-spacing": "off",
     "space-before-blocks": "off",
     "@typescript-eslint/space-before-blocks": ["error", "always"],
